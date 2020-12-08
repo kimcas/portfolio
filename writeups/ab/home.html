@@ -1,0 +1,138 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>A/B Testing</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta charset="UTF-8">
+  </head>
+
+  <body>
+    <div class="navBar">
+            <a id="homeLink" class="navLink" href="../../index.html#home">home</a>
+            <a id="aboutLink" class="navLink" href="../../index.html#about">about</a>
+            <a id="projectsLink" class="navLink" href="../../index.html#projects">projects</a>
+    </div>
+    <header>
+      <h1 class="title">A/B Testing	&#x1f335</h1>
+      <p class="overview">For this project, I changed a template for shopping for succulets and kept the other the same. 
+        I tested whether the changes I made had a significant change on the time of completion (adding over $150 into the cart)
+        and return rate (if the user returned to the shopping page after going to the checkout page).
+      </p>
+    </header>
+    <section class="abexamples">
+      <div class="awebpage">
+        <h2>Example of Interface A</h2>
+        <img class="screenshot" src="images/Screen Shot 2020-10-30 at 1.13.40 AM.png" alt="interfaceA">
+      </div>
+      <div class="bwebpage">
+        <h2>Example of Interface B</h2>
+        <img class="screenshot" src="images/Screen Shot 2020-10-30 at 1.14.03 AM.png" alt="interfaceA">
+      </div>
+      <p class="disclaimer">I minimized the screen so that I could take a screenshot
+        of the fullscreen in one image. </p>
+      <div class="buttonCenter">
+        <a class="linkButton" href="https://stark-oasis-35161.herokuapp.com/" target="_blank">Link to Webpage</a>
+      </div>
+      <p>The main change with the interfaces is the layout. For interface A, I chose
+        to change the layout to a grid so utilize the screen space more and to decrease the 
+        amount of scrolling the user would have to do. 
+      </table></p>
+    </section>
+    <section class="hypotheses">
+      <div class="timetocompletion">
+        <h2>Time to Completion</h2>
+        <div class="hypothesesflex">
+          <div class="null">
+            <h3>Null Hypothesis</h3>
+            <p class="nullText">The changes made to interface A and B will not affect the time to complete the task 
+              of adding over $150 to the cart.
+            </p>
+          </div>
+          <div class="alternate">
+            <h3>Alternate Hypothesis</h3>
+            <p class="alternateText">The changes made to interface A and B will cause
+              interface A to have a quicker time to completion for the given task than
+              interface B.
+            </p>
+          </div>
+        </div>
+        <div class="explanation">
+        <h3>Explanation</h3>
+        <p>Since interface A is more compact and all four items fit on one screen
+          without scrolling, the user is able to click the "Add to Cart" buttons quicker.
+          Additonally, being able to see all products and prices at once will will 
+          expedite the process.
+        </p>
+        </div>
+      </div>
+      <div class="returnrate">
+        <h2>Return Rate</h2>
+        <div class="hypothesesflex">
+          <div class="null">
+            <h3>Null Hypothesis</h3>
+            <p class="nullText">The changes made to interface A and B will not affect the 
+              rate at which users return to the shopping page after viewing their cart (return rate).
+            </p>
+          </div>
+          <div class="alternate">
+            <h3>Alternate Hypothesis</h3>
+            <p class="alternateText">The changes made to interface A and B will cause
+              interface B to have a higher return rate than interface A.
+            </p>
+          </div>
+        </div>
+        <div class="explanation">
+        <h3>Explanation</h3>
+        <p>Since interface B requires more scrolling than interface A, it may be harder
+          for users to correctly gauge if over $150 was added to the cart. Since the only
+          way to check if over $150 was added is to go to the checkout page, the user of interface B will
+          return to the shopping page more often as interface A is more efficient in the layout. 
+        </p>
+        </div>
+      </div>
+    </section>
+    <section class="dataCollection">
+      <h2>Data Collection Process</h2>
+      <p class="dataText">I first collected logs through studio and friends and family
+        since I did not have sufficient data after the data collection from studio. I 
+        then filtered just the important information from the logs, such as 
+        the time stamp, unique users, which interface they interacted with, and 
+        their activity. I then calculated the time to completion for each session log
+        and how many of the users returned to the page after checking out. This information
+        is critical for calculating the t-score, chi2 value, and p-values. Then, 
+        I wrote a python script to determine the t-score, chi2 value, and p-values.
+      </p>
+    </section>
+    <section class="infographic">
+      <h2>Infographic</h2>
+      <p>I made an infographic in order to portray the results of this A/B Testing 
+        Experiment in a more digestible way. 
+      </p>
+      <img class="infographicimg" src="images/infographic.png">
+    </section>
+    <section class="takeaways">
+      <h2>Takeways of A/B Testing</h2>
+      <ul>
+        <li>I think the data collection limited the quality of the results. If I could
+          do this experiment again, I would collect more data from unique users. 
+        </li>
+        <li>Since my results were insignificant so I was unable to 
+          reject the null hypothesis, the time to completion p-value was nearly below 0.05.
+          This means that while it was still an insignificant result, it was close to rejecting 
+          the null hypothesis and proving that interface A had a faster time to completion.
+        </li>
+        <li>In this experiment, it was difficult to tell whether the layout of 
+          the website was the only factor in how the user's responded to the website.</li>
+        <li>In general, A/B testing is a powerful tool to see how little changes can affect
+          your product by a large amount. I think performing another A/B test would be interesting
+          to do on a small factor on an interface such as the color of a button. It would be 
+          a really interesting and cool project to be a part of and to see if button or title colors
+          affect the success of a huge product!
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>

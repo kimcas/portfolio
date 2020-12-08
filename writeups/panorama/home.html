@@ -1,0 +1,63 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>Panorama Stitching </title>
+    <link rel="stylesheet" href="index.css">
+    <!-- TODO: add additional links here! e.g. fonts, icons, more stylesheets, etc. -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta charset="UTF-8">
+  </head>
+
+  <body>
+    <div class="navBar">
+            <a id="homeLink" class="navLink" href="../../index.html#home">home</a>
+            <a id="aboutLink" class="navLink" href="../../index.html#about">about</a>
+            <a id="projectsLink" class="navLink" href="../../index.html#projects">projects</a>
+    </div>
+     <header>
+      <h1 class="title">Panorama Stitching 📸</h1>
+      <p class="overview">I completed this group project for CS1430: Computer Vision as my final project. 
+          In this project, we implement many concepts covered in the course to seamlessly stitch 
+          images of the same object together to create a panoramic image. 
+      </p>
+    </header>
+    <section class="goal">
+      <h2>Goals</h2>
+          <p> Throughout the course, I learned about how a computer can learn from 
+              images. For example, everyday applications such as face recognition, snapchat 
+              filters, or screen readers use computer vision and machine learning.
+              For this project, the main goal was to create a panoramic picture using
+              keypoint detection, feature extraction, and feature matching, the RANSAC
+              algorithm, and warping/shifting the image. If successful, our 
+              code would be able to generate a panoramic picture from different images
+              with different angles of the same scene. 
+          </p>
+    </section>
+    <section class="setbacks">
+      <h2>Setbacks and Future Work</h2>
+      <p>Throughout this process, we encountered a few setbacks. The main setback 
+          being with the stitching of the images due to multiplying the translational 
+          matrix onto the homography matrix to warp and shift the image. In our final product, 
+          the top half of the stitched image is seamless while the bottom reveals some 
+          rigid edges. 
+      </p>
+      <p>The final image and the slight rigit edges on the bottom reveals some 
+          potential future work. We could reevaluate the techniques we used for 
+          stitching and warpign the images, account for the difference in saturation
+          and brightness, and aim towards stitching unordered images together. 
+      </p>
+      <p>Overall, we found that the best approach was matching the features, warping
+          one of the images to the perspective of the previous image, and shifting the 
+          images together on the matched points, and repeating this process. 
+      </p>
+    </section>
+      <div class="button">
+          <!-- <a class="toApp" href="../../images/Final_report.pdf"  -->
+          <a class="toReport" href=""
+        target="_blank">Link to Final Report</a>
+      </div>
+    </sections>
+  </body>
+</html>

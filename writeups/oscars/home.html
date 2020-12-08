@@ -1,0 +1,112 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>How to Win an Oscar </title>
+    <link rel="stylesheet" href="index.css">
+    <!-- TODO: add additional links here! e.g. fonts, icons, more stylesheets, etc. -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta charset="UTF-8">
+  </head>
+
+  <body>
+    <div class="navBar">
+            <a id="homeLink" class="navLink" href="../../index.html#home">home</a>
+            <a id="aboutLink" class="navLink" href="../../index.html#about">about</a>
+            <a id="projectsLink" class="navLink" href="../../index.html#projects">projects</a>
+    </div>
+     <header>
+      <h1 class="title">How To Win An Oscar <img class="oscarImg" alt="Oscars Logo" src="oscar.png"></h1>
+      <p class="overview">I completed this project in DATA1950A: Data Science and performed 
+          hypothesis testing on data sets on Kaggle's Oscar Winner Demographics and TMDb's
+          All Movies Database. We wanted to see which demographics increased the chance
+          of winning an Oscar and specifically hypothesized that white, straight men 
+          would reach their success faster than people of other identities. <span class="emphasize">
+              Please see bottom of page for final poster presentation of information!
+          </span>
+      </p>
+    </header>
+    <section class="goal">
+      <h2>Hypothesis</h2>
+          <p> In recent years, the film industry and award shows have faced criticism for an
+            apparent lack of representation of people from different backgrounds, as seen
+            with the trending hashtag #OscarsSoWhite in 2015. We sought out to
+            investigate the difference regarding how long it took the Academy of Motion Picture Arts 
+            and Sciences to award actors and directors holding different identities. 
+            <span class="bold">Specifically, we tested the hypothesis that white, straight men born on the North American coasts reach their 
+            first Oscar win faster than people of other identities. </span>
+          </p>
+    </section>
+    <section class="setbacks">
+      <h2>Methodology</h2>
+      <p>We tested two major claims on <span class="bold">"credits to success,"</span>
+      meaning the number of film credits that individuals accumulated before their first Oscar win,
+      and <span class="bold">"credits success ratio,"</span> the normalized version of "credits to success" 
+      by dividing each individualo's credits credits to success by their total number of film credits. 
+      </p>
+      <h3>Claim 1</h3>
+      <p>The following identities tend to decrease 
+          credits to success the most: white (race), straight (sexuality), far west/mideast 
+          (birthplace), meaning people with one of these identities were a part of fewer 
+          films before winning their first Oscar. We bucketed birthplaces into regions 
+          (Far West, Rocky Mountain, Southwest, Plains, Great Lakes, Southeast, Mideast, 
+          New England and International), and then converted all categorical variables 
+          (race, sexuality, birthplace) into dummy variables. <span class="bold">We performed multiple linear 
+          regression using our dummy independent variables (race, sexuality, birthplace) 
+          with our “credits to success” and then our new “actor success ratio” dependent variables.</p>
+          <h3>Claim 2</h3>
+          <p>Straight, white men born on the coasts 
+          have a statistically significant, lower mean success ratio than others.
+          In order to test this, <span class="bold">we performed t-tests on the ratios of straight, 
+          white men from the coasts to all others and on each privileged identity 
+          independently compared to all non-privileged identities.</span></p>
+    </section>
+    <section class="results">
+      <h2>Results</h2>
+      <h3> Claim 1</h3>
+      <p>We did not find significant evidence to support our claim that identifying 
+          as Straight and White and being born on the American coasts tended to 
+          decrease the credits to success and success ratio variables. In both of 
+          our performed multiple linear regressions, the R-Squared value was quite 
+          low and while some interesting relationships emerged (ie. Multiracial tending 
+          to decrease the success ratio the most of any single identity), few p-values 
+          were below our alpha threshold of 0.05, and the predicted models did not 
+          fit our data very well.</p>
+        <h3>Claim 2</h3>
+        <p>We did not find sufficient support to reject the null hypothesis that 
+            Straight White men born on the American coasts have the same mean success 
+            ratio as others.The only statistically significant result of our t test 
+            allowed us to reject the null hypothesis that Men and Women have the 
+            same mean success ratio, but it supported that women had a lower mean 
+            (not our alternative hypothesis that men did).</p>
+        <h3>Summary</h3>
+        <p>We cannot accept our hypothesis that straight white men born on the American 
+            coasts reach their first Oscar after a fewer number of film credits than others.</p>
+    </section>
+    <section class="future">
+        <h2>Future Work</h2>
+        <p>Our multiple linear regression models suggest that there may be fewer 
+            overall roles available to people of color to begin with. Further 
+            research would need to be conducted on the amount of roles that are 
+            written specifically for white, straight males vs. others. Furthermore, 
+            comparing these same metrics between different award shows may reveal 
+            consistent biases within the entire film industry and provide more sufficient 
+            data to explore our hypothesis.</p>
+    </section>
+    <section class="link">
+        <h3 class="disclaimer">Please see the poster below for more details on methodology and 
+            specifics on how we analyzed our results. For a larger PDF version, 
+            please click the link!
+        </h3>
+        <div class="button">
+          <!-- <a class="toApp" href="../../images/Final_report.pdf"  -->
+          <a class="toReport" href="../../images/posternoname.pdf"
+        target="_blank">Link to Poster</a>
+      </div>
+        <img class="poster" src="../../images/posternoname.png">
+    </section>
+    
+    </sections>
+  </body>
+</html>
